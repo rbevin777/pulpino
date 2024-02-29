@@ -115,3 +115,4 @@ python2 update-ips.py
 python2 generate-scripts.py
 ```
 
+https://askubuntu.com/questions/818752/how-to-fix-broken-libstdc6-which-also-breaks-apt
