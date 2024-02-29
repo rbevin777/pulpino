@@ -79,7 +79,18 @@ cd ri5cy_gnu_toolchain
 make
 ```
 
-8. Finally clone out the pulpino project, and switch to the branch `fix-adv_dbg_if-commit-issue` as this branch has a fix for this broken issue: https://github.com/pulp-platform/pulpino/issues/399 
+8. add the ri5cy-gnu-toolchain to the path. Go to $HOME directory and add the following line to the `.profile` file. Make sure to update the path to the path where you cloned ri5cy_gnu_toolchain.
+```
+export PATH="$PATH:$HOME/PATH_TO_DIR/ri5cy_gnu_toolchain/install/bin"
+```
+
+Then you will need to restart your PC for these changes to take effect, or you can run the following command in the $HOME directory:
+```
+source .profile
+```
+and this will update the path with the new addition.
+
+9. Finally clone out the pulpino project, and switch to the branch `fix-adv_dbg_if-commit-issue` as this branch has a fix for this broken issue: https://github.com/pulp-platform/pulpino/issues/399 
 ```
 git clone https://github.com/rbevin777/pulpino.git
 cd pulpino
