@@ -90,14 +90,26 @@ source .profile
 ```
 and this will update the path with the new addition.
 
-9. Clone out the pulpino project, and switch to the branch `fix-adv_dbg_if-commit-issue` as this branch has a fix for this broken issue: https://github.com/pulp-platform/pulpino/issues/399 
+9. Clone out the pulpino project
 ```
 git clone https://github.com/rbevin777/pulpino.git
 cd pulpino
-git checkout fix-adv_dbg_if-commit-issue
 ```
 
-10. Run the `update-ips.py` script and `generate-scripts.py`
+10. Update `ips_list.yml` as this fixes a broken issue from here: https://github.com/pulp-platform/pulpino/issues/399 
+Replace this line
+```
+adv_dbg_if:
+  commit: pulpinov1
+```
+with this line
+```
+adv_dbg_if:
+  commit: c440ae8 # pulpinov1 branch was deleted, this is the commit where pulpinov1 was merged.
+```
+
+
+11. Run the `update-ips.py` script and `generate-scripts.py`
 ```
 python2 update-ips.py
 python2 generate-scripts.py
