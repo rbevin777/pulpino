@@ -90,10 +90,16 @@ source .profile
 ```
 and this will update the path with the new addition.
 
-9. Finally clone out the pulpino project, and switch to the branch `fix-adv_dbg_if-commit-issue` as this branch has a fix for this broken issue: https://github.com/pulp-platform/pulpino/issues/399 
+9. Clone out the pulpino project, and switch to the branch `fix-adv_dbg_if-commit-issue` as this branch has a fix for this broken issue: https://github.com/pulp-platform/pulpino/issues/399 
 ```
 git clone https://github.com/rbevin777/pulpino.git
 cd pulpino
 git checkout fix-adv_dbg_if-commit-issue
+```
+
+10. Run the `update-ips.py` script and `generate-scripts.py`
+```
+python2 update-ips.py
+python2 generate-scripts.py
 ```
 
