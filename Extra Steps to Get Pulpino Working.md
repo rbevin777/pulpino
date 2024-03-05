@@ -81,7 +81,5 @@ python2 generate-scripts.py
 
 10. Every instance of `-m32` needs to be removed from the compiler flags. So use whatever tool you wish for that. I use the find/replace feature in VS Code.
 
-11. Also replace every instance of `__riscv__` with `__riscv`.
-
-12. 
+11. Also replace every instance of `__riscv__` with `__riscv`. 
 
