@@ -1,5 +1,5 @@
 ## Steps to get pulpino setup working
-1. Download and install modelsim from here https://www.intel.com/content/www/us/en/software-kit/750666/modelsim-intel-fpgas-standard-edition-software-version-20-1-1.html download the run file into a temporary directory, make it executable using `chmod u+x` and intstall it using `./ModelSimSetup-20.1.1.720-linux.run`
+1. Download and install modelsim from here https://www.intel.com/content/www/us/en/software-kit/750666/modelsim-intel-fpgas-standard-edition-software-version-20-1-1.html download the run file into a temporary directory, make it executable using `chmod +x` and intstall it using `./ModelSimSetup-20.1.1.720-linux.run`
 
 2. Once modelsim is installed locate the install directory where the executables are, e.g. vsim. This will likely be in `$HOME/intelFPGA/MODELSIM_VERSION/modelsim_ase/bin`
 
@@ -17,7 +17,7 @@ sudo apt-get install -y python2
 sudo apt-get install -y python-pip
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
 python2 get-pip.py
-pip2 install pyyaml
+pip install pyyaml
 ```
 
 5. Clone and compile the riscv-gnu-toolchain
@@ -82,4 +82,6 @@ python2 generate-scripts.py
 10. Every instance of `-m32` needs to be removed from the compiler flags. So use whatever tool you wish for that. I use the find/replace feature in VS Code.
 
 11. Also replace every instance of `__riscv__` with `__riscv`. 
+
+12. In the `cmake_configure` scripts in the sw folder, the `GCC_MARCH` variable needs updated to work with the compiler so replace `IMXpulpv2` with `rv32imfxpulpv3`
 
