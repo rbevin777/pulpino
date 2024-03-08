@@ -40,6 +40,12 @@ PULPino has been taped-out as an ASIC in UMC 65nm in January 2016. It has full
 debug support on all targets. In addition we support extended profiling with
 source code annotated execution times through KCacheGrind in RTL simulations.
 
+## Pre-requisites IMPORTANT NOTES!
+The pulpino github hasn't been kept up to date and because of recent changes to compilers e.g. newer versions of 
+GCC and things like this, there are some extra steps to be completed. the pulpino platform must be cloned from the original repo
+because some scripts require access to that repo but on this repo the updated changes have been noted and updated here. As well
+as this, there are steps outlined as pre-requisites in `Extra Steps to Get Pulpino Working.md` to get up an running using current
+versions of ubuntu and GCC.
 
 ## Requirements
 
