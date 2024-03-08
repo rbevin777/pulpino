@@ -10,6 +10,12 @@ sudo apt-get install git curl strace autoconf automake autotools-dev \
     gawk build-essential bison flex texinfo gperf libtool patchutils \
     bc zlib1g-dev libexpat-dev ninja-build cmake libglib2.0-dev \
     tcsh csh wget
+
+sudo dpkg --add-architecture i386
+
+sudo apt-get update
+
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32ncurses6 libxft2 libxft2:i386 libxext6 libxext6:i386
 ```
 4. Download and install python2. This is needed to run scripts in this repo.
 ```
